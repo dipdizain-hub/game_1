@@ -16,9 +16,11 @@ python3 -m http.server 3000 --bind 0.0.0.0
 
 ## Публикация на GitHub Pages
 
-Код находится в ветке `arena/0cca4a20-game-1`. Для первого публичного запуска владельцу нужно один раз открыть **Settings → Pages → Build and deployment → Source → GitHub Actions**. Интеграция Arena не имеет права включить этот параметр через API.
+**Игра:** https://dipdizain-hub.github.io/game_1/
 
-Workflow `.github/workflows/pages.yml` проверяет настройку перед деплоем: пока Pages выключен, он завершается без ошибки; после включения публикует актуальный `index.html` при каждом обновлении.
+Код находится в ветке `arena/0cca4a20-game-1`; Pages включён в режиме GitHub Actions. Workflow `.github/workflows/pages.yml` публикует актуальный `index.html` при каждом его обновлении.
+
+Для публикации используется окружение `piscine-run`: стандартное окружение `github-pages` разрешает деплой только из `main`, а вся работа этого проекта остаётся в рабочей ветке Arena. Не открывай `github.com/.../blob/.../index.html` как игру — эта страница показывает исходный код.
 
 ## Что уже работает
 
