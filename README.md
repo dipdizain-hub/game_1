@@ -14,6 +14,12 @@ python3 -m http.server 3000 --bind 0.0.0.0
 
 Затем открой `http://localhost:3000`.
 
+## Публикация на GitHub Pages
+
+Код находится в ветке `arena/0cca4a20-game-1`. Для первого публичного запуска владельцу нужно один раз открыть **Settings → Pages → Build and deployment → Source → GitHub Actions**. Интеграция Arena не имеет права включить этот параметр через API.
+
+Workflow `.github/workflows/pages.yml` проверяет настройку перед деплоем: пока Pages выключен, он завершается без ошибки; после включения публикует актуальный `index.html` при каждом обновлении.
+
 ## Что уже работает
 
 - Полный playable **Урок 1: «Первый контакт»** (`ls`, `cd piscine`, `pwd`).
